@@ -83,7 +83,9 @@
     <record id="view_task_kanban_key" model="ir.ui.view">
         <field name="name">project.task.kanban.key</field>
         <field name="model">project.task</field>
-        <field name="inherit_id" ref="project.view_task_kanban" />
+        <!-- Odoo 20 : le kanban est minimal, la carte (champ color inclus) vit
+             dans project.view_task_card. -->
+        <field name="inherit_id" ref="project.view_task_card" />
         <field name="arch" type="xml">
             <field name="color" position="after">
                 <field name="url" />
